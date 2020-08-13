@@ -8,7 +8,7 @@ use yii\db\ActiveRecord;
 
 class Currency extends ActiveRecord
 {
-    public function fetchCurrencies()
+    static public function fetchCurrencies()
     {
         $apiUrl = 'http://www.cbr.ru/scripts/XML_daily.asp';
         $xml = simplexml_load_string(file_get_contents($apiUrl));
