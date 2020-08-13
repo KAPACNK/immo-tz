@@ -43,14 +43,15 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            // 'routeParam' => true,
             'rules' => [
+                'api/currency/<currencyId:\d+>' => 'api/currency',
             ],
         ],
-        */
     ],
     'params' => $params,
 ];
