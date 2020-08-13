@@ -7,3 +7,15 @@ services:
       - ./:/app:delegated
     ports:
       - '8000:80'
+  db:
+    container_name: mysql
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_name
+      MYSQL_USER: devuser
+      MYSQL_PASSWORD: devpass
+    ports:
+       - 3306:3306
